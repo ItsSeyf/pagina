@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+.barra{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #01101F;
+}
+#inicio {
+    text-align: center;
+    color: white;
+}
+
+#inicio h1 {
+    font-size: 48px;
+    margin-bottom: 2px;
+}
+
+#inicio p {
+    font-size: 20px;
+}
+header {
+    background-color: #141414;
+    padding: 10px 0;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+nav ul li {
+    margin: 0 50px;
+}
+
+nav ul li a {
+    color: white;
+    background-color: #01101F;
+    padding: 5px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: background-color 0.3s, transform 0.3s;
+    border: 1px solid transparent;
+}
+
+nav ul li a:hover {
+    background-color: #58c2ff;
+    transform: scale(1.1);
+    border: 2px solid #fff;
+}
+
+p{
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    animation-name: show;
+}
+
+.Correos{
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 23px;
+}
+h2{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+.logoW{
+    width: 20px;
+    height: 20px;
+    background-image: url('/img/WhatLogo.png');
+    background-size: cover;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.logop{
+    align-items: center;
+}
+
+.logos {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    color: white;
+    margin-top: 20px;
+}
+
+td{
+    border-left: 2px solid white;
+    width: 500px;
+    height: 500px;
+}
+.table{
+    border: 2px solid white;
+}
+
+@keyframes show{
+    from{
+        opacity: 0;
+        scale: 25%;
+    }
+    to{
+        opacity: 1;
+        scale: 100%;
+    }
+}
+
+img{
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+
+    animation-timeline: --image;
+    animation-name: show;
+
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+}
+
+@keyframes aparecer{
+    0%{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+.cargar{
+    margin-top: 120px;
+    opacity: 0;
+    animation: aparecer 1s ease-out forwards;
+}
+
+.cargar h1 {
+    animation: slideInFromLeft 1s ease-out forwards;
+    animation-delay: 0s; /* Sin retraso */
+  }
+  
+  .cargar table {
+    animation: slideInFromLeft 1s ease-out forwards;
+    animation-delay: 0.5s; /* Retraso de 0.5 segundos */
+  }
+  
+  .cargar p {
+    animation: slideInFromLeft 1s ease-out forwards;
+    animation-delay: 1s; /* Retraso de 1 segundo */
+  }
