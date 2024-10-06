@@ -1,92 +1,231 @@
-#Bienvenido{
-    text-align: center;
-    border-radius: 5px;
-}
-p{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    text-align: center;
-}
-body{
-    background-color: snow;
+*{
+    margin: 0;
+    padding: 0;
 }
 h1{
+    color: white;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
     text-align: center;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #01101F;
+    min-height: 100vh;
+    background-position: center;
+}
+#inicio {
+    text-align: center;
+    color: white;
+}
+#inicio h1 {
+    font-size: 48px;
+}
+
+#inicio p {
+    font-size: 20px;
+}
+.logoW{
+    width: 20px;
+    height: 20px;
+    background-image: url('/img/WhatLogo.png');
+    background-size: cover;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.logop{
+    align-items: center;
+}
+
+.logos {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+nav{
+    background-color: #141414;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav li{
+    height: 70px;
+}
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+nav a:hover{
+    background-color:#01101F;
+}
+  nav li:first-child{
+    margin-right: auto;
+}
+.barrala{
+    position: fixed;
+    top: 0; 
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    z-index: 1000;
+}
+.barrala li{
+    width: 100%;
+}
+.barrala a{
+    width: 100%;
+    color: white;
+}
+.menub{
+    display: none;
+}
+@media(max-width: 800px){
+    .hideOnMobile{
+      display: none;
+    }
+    .menub{
+      display: block;
+    }
+  }
+  @media(max-width: 400px){
+    .barrala{
+      width: 100%;
+    }
+  }
+
+.logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+p{
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    animation-name: show;
+}
+
+.Correos{
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 23px;
 }
 h2{
+    color: white;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
     text-align: center;
 }
-h3{
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-}
-a{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-}
+
 table{
-    border:2px solid #000000;
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
 }
-td{
-    border-left: 2px solid black;
+@keyframes fade{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
-th{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color:darkmagenta;
-    color: snow;
-}
-.formulario{
-    text-align: center;
-}
-strong{
-    text-align: center;
-}
-label{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-}
-button{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    border-radius: 5px;
-}
+
 footer{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     bottom: 0;
     text-align: center;
     width: 100%;
+    color: white;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fade 2s forwards;
 }
-legend{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    border-bottom: 2px solid black;
+
+td{
+    border-left: 2px solid white;
+    width: 370px;
+    height: 300px;
 }
-form{
-    background-color: rgb(216, 216, 216);
+.table{
+    border: 2px solid white;
 }
-select{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+
+@keyframes show{
+    from{
+        opacity: 0;
+        scale: 25%;
+    }
+    to{
+        opacity: 1;
+        scale: 100%;
+    }
 }
-.titulos{
-    border-bottom: 2px solid black;
+
+img{
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+
+    animation-timeline: --image;
+    animation-name: show;
+
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
 }
-.botones{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    background-color: darkmagenta;
-    color:snow;
+
+@keyframes aparecer{
+    0%{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
 }
-.botones2{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    background-color: darkmagenta;
-    color:snow;
-    margin-left: 900px;
+
+.cargar{
+    margin-top: 10px;
+    opacity: 0;
+    animation: aparecer 1s ease-out forwards;
 }
+
+.cargar h1 {
+    animation: slideInFromLeft 1s ease-out forwards;
+    animation-delay: 0s;
+  }
+  
+  .cargar table {
+    animation: slideInFromLeft 1s ease-out forwards;
+    animation-delay: 0.5s;
+  }
+  
+  .cargar p {
+    animation: slideInFromLeft 1s ease-out forwards;
+    animation-delay: 1s;
+  }

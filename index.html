@@ -1,54 +1,74 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SofisticCode</title>
     <link rel="icon" href="img/SLogoRe.png" type="image/png" sizes="16x16">
     <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/codigo.js"></script>
 </head>
 
 <body>
-    <div class="barra">
-        <header>
-            <nav>
-                <a href = "index.html">
-                    <img src ="img/SCodeLogo.png" alt="SCodeLogo" class="logo">
-                </a>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="nosotros.html">Sobre Nosotros</a></li>
-                    <li><a href="servicios.html">Servicios</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
-        </header>
-    </div>
-    <main class="cargar">
-
+    <nav>
+        <ul class="barrala">
+            <li onclick=cerrarbarrala()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Sobre Nosotros</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+        <ul>
+            <li>
+                <a href="index.html"><img src="img/SCodeLogo.png" alt="SCodeLogo" class="logo"></a>
+            </li>
+            <li class="hideOnMobile"><a href="index.html">Inicio</a></li>
+            <li class="hideOnMobile"><a href="nosotros.html">Sobre Nosotros</a></li>
+            <li class="hideOnMobile"><a href="servicios.html">Servicios</a></li>
+            <li class="hideOnMobile"><a href="contacto.html">Contacto</a></li>
+            <li class="menub" onclick=mostrarbarrala()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+        </ul>
+    </nav>
+    <div class="cargar">
         <section id="inicio">
             <h1>Bienvenido a SofisticCode</h1>
             <hr>
-            <p>Innovando el futuro con soluciones tecnológicas a tu medida.</p>
+            <br>
+            <p>
+            SofisticCode - Innovando el futuro con soluciones tecnológicas a tu medida.
+            </p>
+            <br>
+            <P>
+            Desarrollo de software, aplicaciones web, aplicaciones de escritorio, tecnología, soluciones tecnológicas.
+            </P>
             <img src="img/SCodeLogo.png" class="logop">
-            <p>
-                Para mas informacion ingrese en servicios
-            </p>
+            <h2>
+                Testimonios:
+            </h2>
+            <blockquote>
+                <p>
+                    SofisticCode transformó nuestra idea en una aplicación web que nos ayudo a <br>
+                    llevar un mejor control de inventario y clientes. ¡Altamente recomendados!
+                </p>
+                <cite>
+                    Cliente que pidio ser anonimo
+                </cite>
+            </blockquote>
             <br>
-            <p>
-                Para contactarnos ingrese a contacto
-            </p>
-            <br>
-            <p>
-                Para saber mas de nosotros ingrese en sobre nosotros
-            </p>
+            <a href="servicios.html" style="color: white;font-size: 20px; padding-left: 30px;">
+                Servicios
+            </a>
+            <a href="contacto.html" style="color: white;font-size: 20px; padding-left: 50px;">
+                Contactenos Ya
+            </a>
         </section>
-
-    </main>
-    <br/>
+    </div>
+    <br />
     <footer>
         <hr>
         ©SofisticCode.com
     </footer>
 </body>
+
 </html>

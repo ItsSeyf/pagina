@@ -6,48 +6,53 @@
     <link rel="icon" href="img/SLogoRe.png" type="image/png" sizes="16x16">
     <title>Acerca</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/codigo.js"></script>
 </head>
 
 <body>
-    <div class="barra">
-        <header>
-            <nav>
-                <a href="index.html">
-                    <img src="img/SCodeLogo.png" alt="SCodeLogo" class="logo">
-                </a>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="nosotros.html">Sobre Nosotros</a></li>
-                    <li><a href="servicios.html">Servicios</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
-        </header>
-    </div>
+    <nav>
+        <ul class="barrala">
+            <li onclick=cerrarbarrala()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Sobre Nosotros</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+        <ul>
+            <li>
+                <a href="index.html"><img src="img/SCodeLogo.png" alt="SCodeLogo" class="logo"></a>
+            </li>
+            <li class="hideOnMobile"><a href="index.html">Inicio</a></li>
+            <li class="hideOnMobile"><a href="nosotros.html">Sobre Nosotros</a></li>
+            <li class="hideOnMobile"><a href="servicios.html">Servicios</a></li>
+            <li class="hideOnMobile"><a href="contacto.html">Contacto</a></li>
+            <li class="menub" onclick=mostrarbarrala()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+        </ul>
+    </nav>
     <main class="cargar">
         <h1>Es un gusto atenderte</h1>
         <hr>
         <br>
         <br>
         <p>
-            Somos una empresa de desarrollo de software emergente que esta disponible para aceptar cualquier
+            Somos una empresa de desarrollo de software emergente que está disponible para aceptar cualquier
             <br>
-            proyecto de creacion, ponte en contacto con nosotros y brindanos informacion de lo que ocupas crear,
+            proyecto de creación. Ponte en contacto con nosotros y bríndanos información de lo que ocupas crear,
             <br>
-            ademas de tus requerimientos y estaremos encantados de atenderte.
+            además de tus requerimientos, y estaremos encantados de atenderte.
             <br>
             <br>
             Nuestro equipo de trabajo está altamente capacitado para brindarte el mejor servicio en un muy buen tiempo
             <br>
-            y como somos una empresa emergente, manejamos precios bastante razonables y accesibles. 
+            y, como somos una empresa emergente, manejamos precios bastante razonables y accesibles.
             <br>
             <br>
-            Nuestros conocimientos están avalados por la Universidad Americana (CR) ademas del interes nato del
+            Nuestros conocimientos están avalados por la Universidad Americana (CR), además del interés nato del
             <br>
-            equipo de trabajo por la informatica y la pasion por mejorar continuamente.
+            equipo de trabajo por la informática y la pasión por mejorar continuamente.
             <br>
             <br>
-            ¡Contactanos!
+            ¡Contáctanos!
         </p>
     </main>
     <br/>
