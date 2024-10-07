@@ -213,6 +213,7 @@ img{
     margin-top: 10px;
     opacity: 0;
     animation: aparecer 1s ease-out forwards;
+    min-height: 80vh;
 }
 
 .cargar h1 {
