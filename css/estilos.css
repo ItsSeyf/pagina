@@ -175,7 +175,13 @@ td{
 .table{
     border: 2px solid white;
 }
-
+.opiniones{
+    background-color: #011931;
+    width: 1000px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
 @keyframes show{
     from{
         opacity: 0;
@@ -233,7 +239,6 @@ img{
 
 .cite{
     color: white;
-    text-align: center;
-    display: block;
     font-size: 20px;
+    margin-left: 70px;
 }
