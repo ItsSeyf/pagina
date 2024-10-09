@@ -169,18 +169,16 @@ footer{
 
 td{
     border-left: 2px solid white;
-    width: 370px;
-    height: 300px;
+    width: 40vh;
+    height: 35vh;
 }
 .table{
     border: 2px solid white;
 }
 .opiniones{
     background-color: #011931;
-    width: 1000px;
-    height: 100px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 200px;
+    margin-right: 200px;
 }
 @keyframes show{
     from{
