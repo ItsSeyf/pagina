@@ -25,6 +25,7 @@ body {
 }
 
 .escritura h1{
+    margin-top: 70px;
     position: relative;
     width: max-content;
 }
@@ -76,11 +77,13 @@ body {
     height: 90px;
     border-radius: 50%;
     object-fit: cover;
-    margin-right: 20px;
 }
 nav{
     background-color: #141414;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
 }
 nav ul{
     width: 100%;
@@ -189,13 +192,12 @@ table{
 footer{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    bottom: 0;
     text-align: center;
     width: 100%;
     color: white;
-    margin-top: 20px;
+    margin-top: 70px;
     opacity: 0;
-    animation: fade 2s ease calc(var(--escritura) + 4s) forwards;;
+    animation: fade 2s ease calc(var(--escritura) + 2s) forwards;;
 }
 
 td{
@@ -208,9 +210,10 @@ td{
     border: 2px solid white;
 }
 .opiniones{
+    margin-right: auto;
+    margin-left: auto;
     background-color: #011931;
-    margin-left: 20vh;
-    margin-right: 20vh;
+    width: 70%;
 }
 @keyframes show{
     from{
@@ -222,7 +225,11 @@ td{
         scale: 100%;
     }
 }
-
+#ser td{
+    width:10vh;
+    height: 10vh;
+    border: none;
+}
 img{
     view-timeline-name: --image;
     view-timeline-axis: block;
@@ -230,7 +237,7 @@ img{
     animation-timeline: --image;
     animation-name: show;
 
-    animation-range: entry 25% cover 50%;
+    animation-range: entry 25% cover 40%;
     animation-fill-mode: both;
 }
 
@@ -245,7 +252,7 @@ img{
     margin-top: 10px;
     opacity: 0;
     transform: translateY(3rem);
-    animation: aparecer 2s ease calc(var(--escritura) + 2s) forwards;
+    animation: aparecer 2s ease calc(var(--escritura) + 1s) forwards;
     min-height: 80vh;
 }
 
