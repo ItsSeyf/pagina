@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0;
 }
+:root{
+    --bg-color: hsl(49 37% 94%);
+    --escritura: 3s;
+}
 h1{
     color: white;
     font-family: Arial, Helvetica, sans-serif;
@@ -15,19 +19,36 @@ body {
     background-position: center;
 }
 .escritura{
-    display: inline-block;
+    display: grid;
+    place-content: center;
+    text-align: center;
 }
 
 .escritura h1{
-    letter-spacing: 5px;
-    width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    animation:
-        typing 2s
+    position: relative;
+    width: max-content;
+}
+.escritura h1::before, .escritura h1::after{
+  content: "";
+  position: absolute;
+  right: 0;
+  top:0;
+  bottom: 0;
+  left: 0;
+}
+.escritura h1::before{
+    background: var(--bg-color);
+    animation: typing var(--escritura) 1s forwards;
+}
+.escritura h1::after{
+    width: 0.125em;
+    background: #01101F;
+    animation: typing var(--escritura) 1s forwards;
 }
 @keyframes typing{
-    from{width: 0}
+    to{
+        left: 100%;
+    }
 }
 #inicio {
     text-align: center;
@@ -174,7 +195,7 @@ footer{
     color: white;
     margin-top: 20px;
     opacity: 0;
-    animation: fade 2s forwards;
+    animation: fade 2s ease calc(var(--escritura) + 4s) forwards;;
 }
 
 td{
@@ -214,37 +235,19 @@ img{
 }
 
 @keyframes aparecer{
-    0%{
-        transform: translatey(-100%);
-        opacity: 0;
-    }
-    100%{
-        transform: translatey(0%);
+    to {
         opacity: 1;
-    }
+        transform: translateY(0);
+      }
 }
 
 .cargar{
     margin-top: 10px;
     opacity: 0;
-    animation: aparecer 1s ease-out forwards;
+    transform: translateY(3rem);
+    animation: aparecer 2s ease calc(var(--escritura) + 2s) forwards;
     min-height: 80vh;
 }
-
-.cargar h1 {
-    animation: slideInFromLeft 1s ease-out forwards;
-    animation-delay: 0s;
-  }
-  
-  .cargar table {
-    animation: slideInFromLeft 1s ease-out forwards;
-    animation-delay: 0.5s;
-  }
-  
-  .cargar p {
-    animation: slideInFromLeft 1s ease-out forwards;
-    animation-delay: 1s;
-  }
 
 .cite{
     color: white;
