@@ -5,8 +5,23 @@
 h1{
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 30px;
+    font-size: 48px;
     text-align: center;
+}
+.escritura{
+    display: inline-block;
+}
+
+.escritura h1{
+    letter-spacing: 5px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:
+        typing 2s
+}
+@keyframes typing{
+    from{width: 0}
 }
 body {
     font-family: 'Arial', sans-serif;
@@ -17,13 +32,6 @@ body {
 #inicio {
     text-align: center;
     color: white;
-}
-#inicio h1 {
-    font-size: 48px;
-}
-
-#inicio p {
-    font-size: 20px;
 }
 .logoW{
     width: 20px;
@@ -37,6 +45,8 @@ body {
 }
 
 .logop{
+    width: 500px;
+    height: 500px;
     align-items: center;
 }
 
@@ -171,6 +181,7 @@ td{
     border-left: 2px solid white;
     width: 40vh;
     height: 35vh;
+    border-bottom: 2px solid white; 
 }
 .table{
     border: 2px solid white;
@@ -204,11 +215,11 @@ img{
 
 @keyframes aparecer{
     0%{
-        transform: translateX(-100%);
+        transform: translatey(-100%);
         opacity: 0;
     }
     100%{
-        transform: translateX(0%);
+        transform: translatey(0%);
         opacity: 1;
     }
 }
