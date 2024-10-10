@@ -3,7 +3,7 @@
     padding: 0;
 }
 :root{
-    --bg-color: hsl(49 37% 94%);
+    --bg-color: #01101F;
     --escritura: 3s;
 }
 h1{
@@ -66,8 +66,8 @@ body {
 }
 
 .logop{
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
     align-items: center;
 }
 
