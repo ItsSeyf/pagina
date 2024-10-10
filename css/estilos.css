@@ -209,8 +209,8 @@ td{
 }
 .opiniones{
     background-color: #011931;
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 20vh;
+    margin-right: 20vh;
 }
 @keyframes show{
     from{
