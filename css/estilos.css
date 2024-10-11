@@ -175,7 +175,11 @@ h2{
     font-size: 30px;
     text-align: center;
 }
-
+.ser td{
+    width: 12vh;
+    height: 12vh;
+    border: none;
+}
 table{
     margin-left: auto;
     margin-right: auto;
@@ -224,11 +228,6 @@ td{
         opacity: 1;
         scale: 100%;
     }
-}
-.ser td{
-    width: 12vh;
-    height: 12vh;
-    border: none;
 }
 img{
     view-timeline-name: --image;
