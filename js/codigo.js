@@ -18,6 +18,10 @@ async function enviar(event) {
         contacto: document.getElementById('contacto').value,
         infocon: document.getElementById('infocon').value
     };
+    if(datos.nombre==="" || datos.nece==="" || datos.infocon===""){
+        alert('Complete todos los campos')
+        return
+    }
 
     try {
         const response = await fetch('https://formspree.io/f/mwpkeggl', {
