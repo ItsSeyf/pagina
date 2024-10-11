@@ -162,7 +162,56 @@ p{
     font-size: 20px;
     animation-name: show;
 }
+form{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    border: none;
+    height: 50vh;
+    width: 90vh;
+}
 
+form input{
+    width: 200px;
+    height: 25px;
+}
+form select{
+    width: 200px;
+    height: 25px;
+}
+form button{
+    background-color: #141414;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    height: 50px;
+    width: 100px;
+    margin: 0 5px;
+}
+form button:hover{
+    background-color: #011931;
+}
+form fieldset{
+    height: 50vh;
+    width: 90vh;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #011931;
+}
+form label{
+    color: white;
+}
+form legend{
+    color:  white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+}
+.formulario{
+    margin-right: auto;
+    margin-left: auto;
+    height: 50vh;
+    width: 90vh;
+}
 .Correos{
     color: white;
     text-align: center;
