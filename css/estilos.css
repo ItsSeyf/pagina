@@ -167,8 +167,8 @@ form{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     border: none;
-    height: 50vh;
-    width: 90vh;
+    height: 59vh;
+    width: 70vh;
 }
 
 form input{
@@ -193,8 +193,8 @@ form button:hover{
     background-color: #011931;
 }
 form fieldset{
-    height: 50vh;
-    width: 90vh;
+    height: 59vh;
+    width: 70vh;
     margin-right: auto;
     margin-left: auto;
     background-color: #011931;
@@ -213,8 +213,8 @@ form option{
 .formulario{
     margin-right: auto;
     margin-left: auto;
-    height: 50vh;
-    width: 90vh;
+    height: 59vh;
+    width: 70vh;
 }
 .Correos{
     color: white;
