@@ -147,6 +147,9 @@ nav a:hover{
     .barrala{
       width: 100%;
     }
+    .form{
+        padding: 3.5em 1em;
+    }
   }
 
 .logo {
@@ -166,11 +169,21 @@ form{
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
+    margin: auto;
     border: none;
-    height: 59vh;
-    width: 70vh;
+    display: flex;
+    width: 90%;
+    max-width: 700px;
+    border-radius: 1em;
+    padding: 3.5em 1.5em;
+    background-color: #011931;
 }
-
+.formulario{
+    display: grid;
+    width: 100%;
+    gap: 1em;
+    grid-auto-columns: 100%;
+}
 form input{
     width: 200px;
     height: 25px;
@@ -180,29 +193,31 @@ form select{
     height: 25px;
     font-size: 20px;
 }
-form button{
-    background-color: #141414;
-    color: white;
+.formularioboton{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    height: 50px;
-    width: 100px;
-    margin: 0 5px;
+    color: white;
+    background-color: #141414;
+    outline: none;
+    border: none;
+    border: 1px solid #141414;
+    border-radius: 0.2em;
+    cursor: pointer;
+    text-align: center;
+    max-width:150px;
+    max-height: 50px;
 }
-form button:hover{
+.formularioboton:hover{
     background-color: #011931;
 }
 form fieldset{
-    height: 59vh;
-    width: 70vh;
-    margin-right: auto;
-    margin-left: auto;
-    background-color: #011931;
+    border: none;
 }
 form label{
     color: white;
 }
 form legend{
+    text-align: center;
     color:  white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 35px;
@@ -210,11 +225,9 @@ form legend{
 form option{
     font-size: 20px;
 }
-.formulario{
-    margin-right: auto;
-    margin-left: auto;
-    height: 59vh;
-    width: 70vh;
+form textarea{
+    resize: none;
+    padding: 1.8em 1em;
 }
 .Correos{
     color: white;

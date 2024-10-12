@@ -15,7 +15,6 @@ async function enviar(event) {
         nombre: document.getElementById('Nombre').value,
         opcion: document.getElementById('opciones').value,
         nece: document.getElementById('Necesidad').value,
-        contacto: document.getElementById('contacto').value,
         infocon: document.getElementById('infocon').value
     };
     if(datos.nombre==="" || datos.nece==="" || datos.infocon===""){
@@ -53,6 +52,5 @@ function vaciar(event){
     document.getElementById('Nombre').value="";
     document.getElementById('opciones').value=1;
     document.getElementById('Necesidad').value="";
-    document.getElementById('contacto').value=1;
     document.getElementById('infocon').value="";
 }
