@@ -13,11 +13,11 @@ async function enviar(event) {
 
     const datos = {
         nombre: document.getElementById('Nombre').value,
-        opcion: document.getElementById('opciones').value,
+        opcion: document.getElementById('Opciones').value,
         nece: document.getElementById('Necesidad').value,
         infocon: document.getElementById('infocon').value
     };
-    if(datos.nombre==="" || datos.nece==="" || datos.infocon===""){
+    if(datos.nombre==="" || datos.nece==="" || datos.infocon==="" || datos.opcion==="Seleccione---"){
         alert('Complete todos los campos')
         return
     }
@@ -50,7 +50,7 @@ async function enviar(event) {
 function vaciar(event){
     event.preventDefault();
     document.getElementById('Nombre').value="";
-    document.getElementById('opciones').value=1;
+    document.getElementById('Opciones').value="Seleccione---";
     document.getElementById('Necesidad').value="";
     document.getElementById('infocon').value="";
 }
