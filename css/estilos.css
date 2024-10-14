@@ -172,7 +172,7 @@ form{
     margin: auto;
     border: none;
     display: flex;
-    width: 90%;
+    width: 80%;
     max-width: 700px;
     border-radius: 1em;
     padding: 3.5em 1.5em;
@@ -180,7 +180,8 @@ form{
 }
 .formulario{
     display: grid;
-    width: 100%;
+    margin: auto;
+    width: 90%;
     gap: 1em;
     grid-auto-columns: 100%;
 }
@@ -280,20 +281,27 @@ footer{
     animation: fade 2s ease calc(var(--escritura) + 2s) forwards;;
 }
 
-td{
-    border-left: 2px solid white;
-    width: 40vh;
-    height: 35vh;
-    border-bottom: 2px solid white; 
-}
 .table{
-    border: 2px solid white;
+    background-color: #011931;
+    border-radius: 1em;
+    display:  flex;
+    margin: auto;
+    text-align: center;
+    width: 80%;
+    max-width: 360px;
+    align-items: center;
 }
 .opiniones{
     margin-right: auto;
     margin-left: auto;
     background-color: #011931;
-    width: 70%;
+    border-radius: 1em;
+    width: 80%;
+}
+.opiniones p{
+    margin-bottom: 15px;
+    margin-left: 20px;
+    margin-right:20px;
 }
 @keyframes show{
     from{
@@ -334,5 +342,5 @@ img{
 .cite{
     color: white;
     font-size: 20px;
-    margin-left: 70px;
+    margin-left: 15px;
 }
