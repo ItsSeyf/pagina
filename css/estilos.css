@@ -76,10 +76,10 @@ body {
 }
 
 .logos {
-    width: 82px;
-    height: 82px;
     border-radius: 50%;
     object-fit: cover;
+    width: 90px;
+    height: 90px;
 }
 nav{
     background-color: #141414;
@@ -152,6 +152,10 @@ nav a:hover{
     }
     .form{
         padding: 3.5em 1em;
+    }
+    .logos{
+        width: 5vh;
+        height: 5vh;
     }
   }
 
