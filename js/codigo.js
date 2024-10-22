@@ -10,6 +10,27 @@ function cerrarbarrala(){
 
 async function enviar(event) {
     event.preventDefault();
+    const dia=new Date().toLocaleDateString();
+    let registros=JSON.parse(localStorage.getItem('enviosFormularios'));
+    if(!registros || registros.fecha !==dia){
+        registros={fecha: dia,
+            contador: 0
+        };
+    }
+    if(registros.contador >=2){
+        Swal.fire({
+            icon: "error",
+            title: "Error",
+            text: "Solo puede enviar 2 formularios por día",
+            footer: '<a href="contacto.html"> Contacto</a>',
+            color: "#fff",
+            background: "#011931",
+            confirmButtonText: "Cerrar"
+        });
+        return;
+    }
+    registros.contador++;
+    localStorage.setItem('enviosFormularios', JSON.stringify(registros));
 
     const datos = {
         nombre: document.getElementById('Nombre').value,
@@ -18,7 +39,14 @@ async function enviar(event) {
         infocon: document.getElementById('infocon').value
     };
     if(datos.nombre==="" || datos.nece==="" || datos.infocon==="" || datos.opcion==="Seleccione---"){
-        alert('Complete todos los campos')
+        Swal.fire({
+            icon: "warning",
+            title: "Por Favor",
+            text: "Complete todos los campos",
+            color: "#fff",
+            background: "#011931",
+            confirmButtonText: "Cerrar"
+        })
         return
     }
 
@@ -31,19 +59,44 @@ async function enviar(event) {
             },
             body: JSON.stringify(datos),
         });
-
-
         if (response.ok) {
             const resultado = await response.json();
-            alert('Formulario enviado con éxito');
+            Swal.fire({
+                title: "Exito",
+                text:"Formulario enviado con éxito",
+                icon:"success",
+                color: "#fff",
+                background: "#011931",
+                confirmButtonText: "Cerrar"
+            });
+            document.getElementById('Nombre').value="";
+            document.getElementById('Opciones').value="Seleccione---";
+            document.getElementById('Necesidad').value="";
+            document.getElementById('infocon').value="";
         } else {
             const errorMsg = await response.text();
             console.error('Error en la respuesta de la API:', errorMsg);
-            alert('Ocurrió un problema: ' + errorMsg);
+            Swal.fire({
+                icon: "error",
+                title: "Error",
+                text: "Intente de nuevo o póngase en contacto con nosotros.",
+                footer: '<a href="contacto.html"> Contacto</a>',
+                color: "#fff",
+                background: "#011931",
+                confirmButtonText: "Cerrar"
+            })
         }
     } catch (error) {
         console.error('Error capturado:', error);
-        alert('Ocurrió un error, intente nuevamente');
+        Swal.fire({
+            icon: "error",
+            title: "Error",
+            text: "Intente de nuevo o póngase en contacto con nosotros.",
+            footer: '<a href="contacto.html"> Contacto</a>',
+            color: "#fff",
+            background: "#011931",
+            confirmButtonText: "Cerrar"
+        })
     }
 }
 
