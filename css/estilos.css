@@ -138,6 +138,13 @@ nav a:hover{
 .menub{
     display: none;
 }
+
+@media(max-width: 480px){
+    .logos{
+        width: 5.2vh;
+        height: 5.2vh;
+    }
+  }
 @media(max-width: 800px){
     .hideOnMobile{
       display: none;
@@ -152,10 +159,6 @@ nav a:hover{
     }
     .form{
         padding: 3.5em 1em;
-    }
-    .logos{
-        width: 5.2vh;
-        height: 5.2vh;
     }
   }
 
