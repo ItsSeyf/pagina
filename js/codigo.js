@@ -29,8 +29,6 @@ async function enviar(event) {
         });
         return;
     }
-    registros.contador++;
-    localStorage.setItem('enviosFormularios', JSON.stringify(registros));
 
     const datos = {
         nombre: document.getElementById('Nombre').value,
@@ -73,6 +71,8 @@ async function enviar(event) {
             document.getElementById('Opciones').value="Seleccione---";
             document.getElementById('Necesidad').value="";
             document.getElementById('infocon').value="";
+            registros.contador++;
+            localStorage.setItem('enviosFormularios', JSON.stringify(registros));
         } else {
             const errorMsg = await response.text();
             console.error('Error en la respuesta de la API:', errorMsg);
@@ -85,6 +85,7 @@ async function enviar(event) {
                 background: "#011931",
                 confirmButtonText: "Cerrar"
             })
+            localStorage.setItem('enviosFormularios', JSON.stringify(registros));
         }
     } catch (error) {
         console.error('Error capturado:', error);
@@ -97,6 +98,7 @@ async function enviar(event) {
             background: "#011931",
             confirmButtonText: "Cerrar"
         })
+        localStorage.setItem('enviosFormularios', JSON.stringify(registros));
     }
 }
 
