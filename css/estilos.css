@@ -206,6 +206,7 @@ form select{
     width: 200px;
     height: 25px;
     font-size: 20px;
+    border-radius: 5px;
 }
 .formularioboton{
     font-family: Arial, Helvetica, sans-serif;
@@ -250,6 +251,10 @@ form textarea{
     padding: 1.8em 1em;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
+    border-radius: 5px;
+}
+#Nombre{
+border-radius: 5px;
 }
 .Correos{
     color: white;
@@ -304,12 +309,9 @@ footer{
 .table{
     background-color: #011931;
     border-radius: 1em;
-    display:  flex;
-    margin: auto;
     text-align: center;
-    width: 80%;
-    max-width: 360px;
-    align-items: center;
+    width: 20%;
+    min-width: 20%;
 }
 .opiniones{
     margin-right: auto;
