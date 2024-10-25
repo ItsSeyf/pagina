@@ -144,6 +144,9 @@ nav a:hover{
         width: 5.2vh;
         height: 5.2vh;
     }
+    .formularioboton{
+        width: 100px;
+    }
   }
 @media(max-width: 800px){
     .hideOnMobile{
